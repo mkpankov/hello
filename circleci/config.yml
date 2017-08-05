@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: liuchong/rustup:stable
+
+    steps:
+      - checkout
+      - run: cargo build --verbose
+      - run: cargo test --verbose
